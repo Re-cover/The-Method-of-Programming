@@ -1,8 +1,8 @@
 *
-!.cpp
-!.c
-!.h
-*.DS_Store
+!*.cpp
+!*.c
+!*.h
+.DS_Store
 
 # Compiled Object files
 *.slo
