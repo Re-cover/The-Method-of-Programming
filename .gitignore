@@ -1,8 +1,8 @@
+# UNIX Executables
 *
 !*.*
-# !*.cpp
-# !*.c
-# !*.h
+
+# Mac DS_Store
 .DS_Store
 
 # Compiled Object files
