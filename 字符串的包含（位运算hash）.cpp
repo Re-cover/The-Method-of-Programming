@@ -5,25 +5,22 @@ using namespace std;
 
 bool StringContain(string &a, string &b)
 {
-	int count = 0;
+	int hash = 0;
+	for (int i = 0; i < a.length(); ++i)
+		hash |= (1 << (a[i] - 'A'));
 	for (int i = 0; i < b.length(); ++i)
-	{
-		count++;
-		int j;
-		for(j = 0; (j < a.length()) && (a[j] != b[i]); ++j)
-		;
-		if (j >= a.length()) {
+		if((hash & (1 << (b[i] - 'A'))) == 0)
 			return false;
-		}
-	}
 	return true;
 }
+
 int main(int argc, char *argv[]) {
 	string a, b;
-	while (cin>>a>>b) {
-		if(StringContain(a, b))
+	while(cin>>a>>b)
+	{
+		if (StringContain(a, b)) 
 			cout<<"Yes"<<endl;
-		else 
+		else
 			cout<<"No"<<endl;
 	}
 	return 0;
